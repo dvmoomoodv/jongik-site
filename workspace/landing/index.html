@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko" class="perfect-scrollbar-off">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>
+        피노밸리 | 프리미엄 전원주택
+    </title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="피노밸리 | 양평 3억대 프리미엄 전원주택">
+    <meta property="og:description" content="역세권+프라이버시+정남향, 양평 3억대 프리미엄 전원주택">
+    <meta property="og:image" content="img/pinovalley_opengraph.jpg">
+
+    <meta name="title" content="피노밸리 | 양평 3억대 프리미엄 전원주택">
+    <meta name="description" content="역세권+프라이버시+정남향, 양평 3억대 프리미엄 전원주택">
+
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+        name="viewport">
+    <!--     Fonts and icons     -->
+    <link href="../css" rel="stylesheet">
+    <link href="../font-awesome.min.css" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="../bootstrap.min.css" rel="stylesheet">
+    <link href="../paper-dashboard.css" rel="stylesheet">
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="../demo.css" rel="stylesheet">
+
+    <style type="text/css">
+        /* Chart.js */
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
+    </style>
+    <script src="../js" async=""></script>
+</head>
+
+<body class="" style="background-color: white;">
+
+    <div style="text-align: center;">
+        <div id="header_image"
+            style="background-image: url(&quot;../official_pc_01.jpg&quot;); background-size: auto 100%; background-position: center center; height: 732px; width: auto;">
+            <img class="scroll-down-button" src="../scroll_down.png" style=" z-index: 1;" alt="">
+        </div>
+        <img style="width: 100%; height: auto;" src="../official_pc_02.jpg" alt="">
+        <img style="width: 100%; height: auto;" src="../official_pc_03.jpg" alt="">
+        <img style="width: 100%; height: auto;" src="../official_pc_04.jpg" alt="">
+        <img style="width: 100%; height: auto;" src="../official_pc_05.jpg" alt="">
+        <img style="width: 100%; height: auto;" src="../official_pc_06.jpg" alt="">
+        <img style="width: 100%; height: auto;" src="../official_pc_07.jpg" alt="" usemap="#imagemap1">
+        <map name="imagemap1">
+            <area target="_blank" alt="피노밸리 드론영상" title="피노밸리 드론영상"
+              href="https://www.youtube.com/watch?v=Ian9szQ7Oto" coords="0, 838, 2400, 2352" shape="rect">
+          </map>
+          <map name="imagemap2">
+            <area target="_blank" alt="몽뜨블루 드론영상" title="몽뜨블루 드론영상"
+              href="https://www.youtube.com/watch?v=CG1rvOrtXZE" coords="1285,1935,2236,2632" shape="rect">
+          </map>
+        
+        <img style="width: 100%; height: auto;" src="../official_pc_08.jpg" alt="">
+        <img style="width: 100%; height: auto;" src="../official_pc_09.jpg" alt="">
+        <img style="width: 100%; height: auto;" src="../official_pc_10.jpg" alt="" usemap="#imagemap2">
+        <img style="width: 100%; height: auto;" src="../official_pc_11.jpg" alt="">
+        <div class="float-footer" id="footer" onclick="openGoogleForm();">
+            <img style="width: 100%; height: auto;" src="../footer.png" alt="">
+        </div>
+    </div>
+
+    <!--   Core JS Files   -->
+    <script>
+        window.onload = function () {
+            if (window.innerWidth <= 450) {
+                location.href = "../landing_m/index.html";
+            } else {
+                $('#header_image').height(window.innerHeight);
+                $('#header_image').width("auto");
+
+                $('#pop_img').height(window.innerHeight / 1.25);
+                $('#pop_img').width("auto");
+
+
+            }
+
+            $('img[usemap]').rwdImageMaps();
+        }
+
+        window.addEventListener('resize', function (event) {
+            if (window.innerWidth <= 450) {
+                location.href = "../landing_m/index.html";
+            } else {
+                $('#header_image').height(window.innerHeight);
+                $('#header_image').width("auto");
+
+                $('#pop_img').height(window.innerHeight / 1.25);
+                $('#pop_img').width("auto");
+            }
+
+
+        });
+        var lastScrollTop = 0,
+
+            delta = 15;
+
+        window.addEventListener('scroll', () => {
+            let scrollLocation = document.documentElement.scrollTop; // 현재 스크롤바 위치
+            if (scrollLocation == 0) {
+                $('.float-footer').hide();
+            } else {
+                $('.float-footer').show();
+            }
+        })
+
+        function openKakao() {
+            location.href = "https://pf.kakao.com/_xgxduAK/chat";
+        }
+
+        function openCall() {
+            location.href = "tel:0507-1348-7655";
+        }
+
+        function openGoogleForm() {
+            firebase.analytics().logEvent('tour_button_click_desktop');
+            location.href = "https://forms.gle/AoUGwFAY3aKbUDYx6";
+        }
+
+        function openSeminar() {
+            window.open('https://forms.gle/MfiFnu1jvRc2jMUa7')
+        }
+
+        function closeSeminar() {
+            $('.pop-up-div').hide();
+        }
+    </script>
+    <script src="../jquery.min.js"></script>
+    <script src="../popper.min.js"></script>
+    <script src="../bootstrap.min.js"></script>
+    <script src="../jquery.rwdImageMaps.min.js"></script>
+    <script src="../perfect-scrollbar.jquery.min.js"></script>
+    <!-- Chart JS -->
+    <script src="../chartjs.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="../bootstrap-notify.js"></script>
+    <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="../paper-dashboard.min.js" type="text/javascript"></script>
+    <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+    <script src="../demo.js"></script>
+
+
+</body>
+
+</html>
